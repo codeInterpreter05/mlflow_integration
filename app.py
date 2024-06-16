@@ -62,8 +62,12 @@ def evaluate_model(y_true, y_pred):
     r2 = r2_score(y_true, y_pred)
     return mae, rmse, r2
 
+import dagshub
+dagshub.init(repo_owner='codeInterpreter05', repo_name='my-first-repo', mlflow=True)
+
 # Start MLflow experiment
 print("Starting MLflow experiment...")
+# mlflow.set_tracking_url('')
 mlflow.set_experiment("Model Tracking Experiment")
 
 for model_name, model in models.items():

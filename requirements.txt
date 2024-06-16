@@ -3,3 +3,4 @@ mlflow==2.2.2
 numpy
 joblib
 fastapi
+dagshub
